@@ -4,11 +4,11 @@ import { Aic_Logo } from "../assets";
 const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col w-screen bg-slate-800 text-white">
+      <footer className="flex flex-col w-screen bg-slate-800 text-white pt-4">
         <div className="flex w-full justify-evenly px-20 py-4">
-          <div>
+          <div className="text-center">
             <h1 className="font-bold text-lg mb-5">AIC-PECF</h1>
-            <img src={Aic_Logo} className="w-[100px]" />
+            <img src={Aic_Logo} className="w-[175px]" />
           </div>
           <div>
             <h1 className="font-bold text-lg mb-5">About us</h1>

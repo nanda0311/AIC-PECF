@@ -4,13 +4,15 @@ import { Aic_Logo } from "../../assets";
 const AboutUs = () => {
   return (
     <>
-      <section className="w-screen flex justify-center px-[200px] py-10">
-        <div className="flex">
+      <section className="w-screen pt-[100px] flex justify-center px-[200px] py-10">
+        <div className="flex gap-10">
           <div className="w-[40%] flex justify-center">
             <img src={Aic_Logo} />
           </div>
-          <div className="w-[60%]">
-            <h1 className="text-4xl font-bold">About Us</h1>
+          <div className="w-[60%] flex flex-col">
+            <div className="flex">
+              <h1 className="text-4xl font-bold left-0">About Us</h1>
+            </div>
             <p className="text-lg text-justify py-5">
               Atal Incubation Centre - Pondicherry Engineering College
               Foundation (AIC-PECF) is fully supported and funded by Atal
@@ -27,9 +29,11 @@ const AboutUs = () => {
               generate employment and drive the economy - Connect start-ups with
               mentor community for guidance
             </p>
-            <button className="bg-blue-500 text-white font-bold text-xl px-5 py-2 rounded-xl">
-              Learn More
-            </button>
+            <div className="w-full flex justify-center">
+              <button className="bg-slate-500 text-white font-bold text-md px-5 py-2 rounded-lg hover:bg-slate-950 duration-200 ease-linear">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
       </section>
