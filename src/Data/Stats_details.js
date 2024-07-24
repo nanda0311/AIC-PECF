@@ -1,4 +1,4 @@
-const Stats = [
+const Stats_data = [
   {
     logo: null,
     Title: "Students Trained",
@@ -41,4 +41,4 @@ const Stats = [
   },
 ];
 
-export default Stats;
+export default Stats_data;

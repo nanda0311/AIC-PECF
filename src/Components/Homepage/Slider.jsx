@@ -27,14 +27,14 @@ const Slider = () => {
               setCurrSlide((prevSLide) => ++prevSLide % Home_slide.length);
             }, 3000)}>
 
-               <img src={ele.photo} className="object-cover w-full"/>
+               <img src={ele.photo} className="object-cover object-[0%_20%] w-full"/>
             </div>
           );
         })}
         </div>
 
       </div>
-        <div className="flex gap-3 justify-center item-center py-2 mt-4">
+        <div className="flex gap-3 justify-center item-center py-4 ">
           {Home_slide.map((item,index) => {
              return ( <div className={`${currSlide===index? "bg-slate-800" : "bg-slate-400"} min-w-[10px] rounded-full min-h-[10px] cursor-pointer`}
                onClick = {() => {
