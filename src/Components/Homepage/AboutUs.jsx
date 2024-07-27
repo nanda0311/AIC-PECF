@@ -7,7 +7,7 @@ const AboutUs = () => {
       <section className="w-screen pt-[100px] flex justify-center px-[200px] py-10">
         <div className="flex gap-20">
           <div className="w-[25%] flex justify-center">
-            <img src={Aic_Logo} className="object-contain"/>
+            <img src={Aic_Logo} className="object-contain drop-shadow-md"/>
           </div>
           <div className="w-[60%] flex flex-col">
             <div className="flex">

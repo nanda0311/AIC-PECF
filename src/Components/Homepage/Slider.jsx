@@ -18,8 +18,8 @@ const Slider = () => {
   return (
     <>
     <section className="w-screen">
-      <div className="w-full h-[70vh] flex  mt-2" >
-        <div  className={`flex transition-transform duration-700`} style={{transform : `translateX(-${currSlide*100}vw)`,width : `${Home_slide.length*100}vw`}}>
+      <div className="w-full h-[73vh] flex  mt-2" >
+        <div  className={`flex transition-transform duration-1000`} style={{transform : `translateX(-${currSlide*100}vw)`,width : `${Home_slide.length*100}vw`}}>
         {Home_slide.map((ele) => {
           return (
 
