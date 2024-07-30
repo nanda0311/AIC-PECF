@@ -26,8 +26,8 @@ const Stats = () => {
   <div className="mx-auto w-[85vw] px-10 py-4 grid grid-cols-4 gap-8 grid-rows-2 select-none" id="stats">
    {
     Stats_data.map((item,index) => {
-       return ( <div key={index} className={`${index%2===0 ? "border-blue-600" : "border-orange-600"} group flex justify-between items-center bg-gray-100 rounded-md border-l-4 duration-300  text-black text-lg p-4`}>
-          <div className="group-hover:-translate-y-2 duration-500">
+       return ( <div key={index} className={` odd:border-orange-500 even:border-blue-500 group flex justify-between items-center bg-gray-100 rounded-md border-l-4 duration-300  text-black text-lg p-4`}>
+          <div className="group-hover:-translate-y-2 duration-300">
           <h1>{item.Title}</h1>
           <h3 className="font-semibold text-2xl">{statsInView ? <CountUp start={0} end={item.count} duration={3}></CountUp> : 0}+</h3>
           </div>

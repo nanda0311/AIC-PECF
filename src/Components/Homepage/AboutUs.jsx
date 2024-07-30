@@ -1,15 +1,40 @@
 import React from "react";
 import { Aic_Logo } from "../../assets";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 const AboutUs = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.from('#logo',{
+      x : -500,
+      filter : "blur(5px)",
+      duration : 0.7,
+      delay : 0.5,
+      scrollTrigger : {
+        trigger : '#logo',
+        start : 'top bottom',
+      }
+    })
+    gsap.from('#body',{
+      y : 200,
+      filter : "blur(5px)",
+      duration : 0.7,
+      scrollTrigger : {
+        trigger : '#logo',
+        start : 'top bottom',
+      }
+    })
+  },[])
   return (
     <>
-      <section className="w-screen pt-[100px] flex justify-center px-[200px] py-10">
+      <section className="w-screen pt-[100px] flex justify-center px-[200px] py-10" id="about-section">
         <div className="flex gap-20">
-          <div className="w-[25%] flex justify-center">
+          <div className="w-[25%] flex justify-center" id="logo">
             <img src={Aic_Logo} className="object-contain drop-shadow-md"/>
           </div>
-          <div className="w-[60%] flex flex-col">
+          <div className="w-[60%] flex flex-col" id="body">
             <div className="flex">
               <h1 className="text-4xl font-bold left-0">About Us</h1>
             </div>
