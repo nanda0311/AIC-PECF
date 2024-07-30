@@ -18,7 +18,7 @@ const Slider = () => {
   return (
     <>
     <section className="w-screen">
-      <div className="w-full h-[73vh] flex  mt-2">
+      <div className="relative w-full h-[73vh] flex  mt-2">
         <div  className={`flex transition-transform duration-1000`} style={{transform : `translateX(-${currSlide*100}vw)`,width : `${Home_slide.length*100}vw`}}>
         {Home_slide.map((ele,i) => {
           return (
@@ -46,10 +46,10 @@ const Slider = () => {
           })}
         </div>
         {/* arrows for navigating slides */}                                                        
-        <div className="absolute top-[50%] bot left-0 p-3 cursor-pointer bg-gray-200/50 shadow-lg" onClick={() => setCurrSlide(prevSlide => --prevSlide%Home_slide.length) }>
+        <div className="absolute top-[50%] bot left-0 py-5 px-3 cursor-pointer bg-gray-200/50 shadow-lg" onClick={() => setCurrSlide(prevSlide => --prevSlide%Home_slide.length) }>
             <img src={arrowIcon} alt="prev" className=" w-12"/>
         </div>
-        <div className="absolute  top-[50%] bot right-0 p-3 cursor-pointer bg-gray-200/30 shadow-lg" onClick={() => setCurrSlide(prevSlide => ++prevSlide%Home_slide.length) }>
+        <div className="absolute  top-[50%] bot right-0 py-5 px-3 cursor-pointer bg-gray-200/30 shadow-lg" onClick={() => setCurrSlide(prevSlide => ++prevSlide%Home_slide.length) }>
             <img src={arrowIcon} alt="next" className="rotate-180 w-12"/>
         </div>
     </section>
