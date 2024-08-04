@@ -8,6 +8,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Homepage />}>
           <Route index element={<Home />} />
+          <Route path="/contact" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

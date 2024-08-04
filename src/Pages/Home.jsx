@@ -3,7 +3,8 @@ import Slider from "../Components/Homepage/Slider";
 import AboutUs from "../Components/Homepage/AboutUs";
 import Upcoming from "../Components/Homepage/Upcoming";
 import Stats from "../Components/Homepage/Stats";
-import Timeline from "../Components/Homepage/Timeline"
+import Timeline from "../Components/Homepage/Timeline";
+import Partners from "../Components/Homepage/Partners";
 
 const Home = () => {
   return (
@@ -13,8 +14,8 @@ const Home = () => {
       <Upcoming />
       <p>Focus area</p>
       <Stats />
-      <Timeline/>
-      <p>partners</p>
+      <Timeline />
+      <Partners />
     </>
   );
 };
