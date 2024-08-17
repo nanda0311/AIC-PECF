@@ -5,7 +5,7 @@ const Navbar_menu = [
     drop: null,
   },
   {
-    Title: "Portfolio",
+    Title: `Portfolio `,
     link: "/",
     drop: "active",
     dropList: [

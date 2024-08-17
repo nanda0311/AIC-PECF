@@ -5,10 +5,12 @@ import Upcoming from "../Components/Homepage/Upcoming";
 import Stats from "../Components/Homepage/Stats";
 import Timeline from "../Components/Homepage/Timeline";
 import Partners from "../Components/Homepage/Partners";
+import Landing from "../Components/Homepage/Landing";
 
 const Home = () => {
   return (
     <>
+      <Landing />
       <Slider />
       <AboutUs />
       <Upcoming />

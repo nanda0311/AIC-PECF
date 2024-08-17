@@ -13,6 +13,20 @@ import Slide6 from "./Images/slide6.jpg";
 import Slide7 from "./Images/slide7.jpg";
 
 //icons
-import arrowIcon from "./icons/arrowIcon.svg"
+import arrowIcon from "./icons/arrowIcon.svg";
+import downArrow from "./icons/downArrow.png";
 
-export { Aic_Logo, Niti_Logo, Ptu_Logo, Slide1,Slide2,Slide3,Slide4,Slide5,Slide6,Slide7,arrowIcon };
+export {
+  Aic_Logo,
+  Niti_Logo,
+  Ptu_Logo,
+  Slide1,
+  Slide2,
+  Slide3,
+  Slide4,
+  Slide5,
+  Slide6,
+  Slide7,
+  arrowIcon,
+  downArrow,
+};

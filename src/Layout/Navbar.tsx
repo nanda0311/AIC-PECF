@@ -6,8 +6,8 @@ import Navbar_menu from "../Data/Navbar_details";
 
 export function NavbarDemo() {
   return (
-    <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
+    <div className="w-full flex  justify-center">
+      <Navbar className="top-2 sticky" />
     </div>
   );
 }
@@ -15,7 +15,10 @@ export function NavbarDemo() {
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className={cn("top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+    <div
+      className={cn("top-10 inset-x-0  mx-auto z-50", className)}
+      style={{ position: "sticky" }}
+    >
       <Menu setActive={setActive}>
         {Navbar_menu.map((ele, index) => {
           return (
