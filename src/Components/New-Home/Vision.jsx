@@ -1,10 +1,26 @@
 import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Vision = () => {
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useGSAP(() => {
+    gsap.from('#vision-text',{
+      x : -500,
+      duration : 1,
+      scrollTrigger : {
+        trigger : '#vision-text'
+      }
+    })
+  },[])
+
   return (
-    <div className="py-10">
+    <div className="py-10 mt-10">
       <div className="flex px-10">
-        <div className="w-[50%] flex flex-col gap-3 px-10">
+        <div className="w-[50%] flex flex-col gap-3 px-10" id="vision-text">
           <div className="bg-yellow-400 py-2 w-fit px-5 pr-10 rounded-r-full">
             <h1 className="text-3xl font-semibold tracking-wider">
               OUR VISION

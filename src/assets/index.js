@@ -16,6 +16,8 @@ import Slide7 from "./Images/slide7.jpg";
 import arrowIcon from "./icons/arrowIcon.svg";
 import downArrow from "./icons/downArrow.png";
 
+import techPattern from  "./Images/techPattern.svg"
+
 export {
   Aic_Logo,
   Niti_Logo,
@@ -29,4 +31,5 @@ export {
   Slide7,
   arrowIcon,
   downArrow,
+  techPattern
 };

@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import { arrowIcon } from "../../assets";
 
 let videoInterval;
+const SLIDE_SHOW_DELAY = 4000;
+
 const Slider = () => {
   const [currSlide, setCurrSlide] = useState(0);
   useEffect(() => {
     videoInterval = setInterval(() => {
       setCurrSlide((prevSLide) => ++prevSLide % Home_slide.length);
-    }, 4000);
+    }, SLIDE_SHOW_DELAY);
     return () => {
       clearInterval(videoInterval);
     };
@@ -39,7 +41,7 @@ const Slider = () => {
           </div>
         </div>
         {/* bubbles for navigation of slides */}
-        <div className="flex gap-3 justify-center item-center py-4 absolute bottom-10 w-full">
+        <div className="flex gap-3 justify-center item-center py-4 absolute bottom-2 w-full">
           {Home_slide.map((item, index) => {
             return (
               <div
@@ -54,7 +56,7 @@ const Slider = () => {
                     setCurrSlide(
                       (prevSLide) => ++prevSLide % Home_slide.length
                     );
-                  }, 4000);
+                  }, SLIDE_SHOW_DELAY);
                 }}
               />
             );

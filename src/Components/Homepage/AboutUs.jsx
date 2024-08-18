@@ -23,7 +23,7 @@ const AboutUs = () => {
       duration : 0.7,
       scrollTrigger : {
         trigger : '#logo',
-        start : 'top bottom',
+        start : '200px bottom',
       }
     })
   },[])
