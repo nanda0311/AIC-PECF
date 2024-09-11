@@ -1,7 +1,48 @@
-import React from "react";
+
 import tick from '../../assets/icons/tick.svg'
+import React from 'react'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const WeOffer = () => {
+    
+  useGSAP(() => {
+ 
+    gsap.fromTo(
+        '#box-1',
+        { height: "100px" },
+        {
+          height: '100%',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+    gsap.fromTo(
+        '#box-3',
+        { width: "150px" },
+        {
+          width: '100%',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+    gsap.fromTo(
+        '#box-2',
+        { width: "30%" },
+        {
+          width: '250px',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+  },[])
+
   return (
     <div>
       {" "}
@@ -41,9 +82,9 @@ const WeOffer = () => {
            </div>
           </aside>
           <aside className="grid grid-cols-4 grid-rows-4 min-w-[60%] gap-5">
-            <div className="row-span-3 row-start-2 bg-yellow-300"></div>
-            <div className="row-span-3 col-span-3  bg-yellow-300"></div>
-            <div className="col-span-3 bg-yellow-300"></div>
+            <div id='box-1' className="row-span-3 row-start-2 bg-yellow-300"></div>
+            <div id='box-2' className="row-span-3 col-span-3  bg-yellow-300"></div>
+            <div id='box-3' className="col-span-3 bg-yellow-300"></div>
           </aside>
         </section>
       </div>

@@ -1,7 +1,47 @@
 import React from 'react'
 import Stats from './Stats'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const About = () => {
+    
+  useGSAP(() => {
+ 
+    gsap.fromTo(
+        '#box-1',
+        { height: "100px" },
+        {
+          height: '100%',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+    gsap.fromTo(
+        '#box-3',
+        { width: "150px" },
+        {
+          width: '100%',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+    gsap.fromTo(
+        '#box-2',
+        { width: "30%" },
+        {
+          width: '250px',
+          duration: 2,
+          repeat: -1,
+          yoyo: true,
+          ease: 'power2.inOut'
+        }
+      );
+  },[])
+
   return (
     <div className='mb-10'>
         {/* about-content  */}
@@ -21,10 +61,10 @@ const About = () => {
                     &nbsp;     &nbsp; AIC-Pondicherry provides a widerange of services covering the entire spectrum of startup needs,from mentorship to infrastructure.The foundation nurtures innovation and helps transform ideas into successful enterprises. With a focus on technology, item powers startups to scale and succeed.
                     </p>
                 </aside>
-                <aside className='grid grid-cols-4 grid-rows-4 min-w-[50%] gap-5'>
-                    <div className='row-span-3 row-start-2 bg-yellow-300'></div>
-                    <div className='row-span-3 col-span-3  bg-yellow-300'></div>
-                    <div className='col-span-2 col-start-2 bg-yellow-300'></div>
+                <aside className='grid grid-cols-4 grid-rows-4 min-w-[50%] gap-5 overflow-hidden'>
+                    <div id='box-1' className='row-span-4 bg-yellow-300'></div>
+                    <div id='box-2' className='row-span-3 col-span-3 bg-yellow-300'></div>
+                    <div id='box-3' className='col-span-3 col-start-2 bg-yellow-300'></div>
                 </aside>
             </section>
         </div>
