@@ -40,6 +40,13 @@ const About = () => {
           ease: 'power2.inOut'
         }
       );
+      gsap.from('#border-bottom-2', {
+        width : 0,
+        duration : 0.7,
+        scrollTrigger : {
+          trigger : '#border-bottom-2',
+        }
+      })
   },[])
 
   return (
@@ -49,7 +56,7 @@ const About = () => {
             <div className='max-w-fit ml-[-30px]'>
                 <h2 className='text-2xl font-semibold'>AIC-PECF</h2>
                 {/* border bottom  */}
-                <div className='mt-2 w-20 mx-auto h-[6px] rounded-full bg-yellow-400'></div>
+                <div id='border-bottom-2' className='mt-2 w-16 mx-auto h-[6px] rounded-full bg-customBlue'></div>
             </div>
             <section className='flex justify-between w-full gap-20 mt-10'>
                 {/* text-body */}
@@ -62,9 +69,9 @@ const About = () => {
                     </p>
                 </aside>
                 <aside className='grid grid-cols-4 grid-rows-4 min-w-[50%] gap-5 overflow-hidden'>
-                    <div id='box-1' className='row-span-4 bg-yellow-300'></div>
-                    <div id='box-2' className='row-span-3 col-span-3 bg-yellow-300'></div>
-                    <div id='box-3' className='col-span-3 col-start-2 bg-yellow-300'></div>
+                    <div id='box-1' className='row-span-4 bg-customBlue'></div>
+                    <div id='box-2' className='row-span-3 col-span-3 bg-customBlue'></div>
+                    <div id='box-3' className='col-span-3 col-start-2 bg-customBlue'></div>
                 </aside>
             </section>
         </div>
