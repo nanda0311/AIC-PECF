@@ -136,7 +136,7 @@ const Navbar_menu = [
   },
   {
     Title: "Contact Us",
-    link: "/",
+    link: "/contact",
     drop: null,
   },
 ];

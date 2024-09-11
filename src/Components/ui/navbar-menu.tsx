@@ -18,21 +18,25 @@ export const MenuItem = ({
   active,
   item,
   children,
+  link,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  link: string;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative flex">
       <div className="flex items-center ">
-        <motion.p
-          transition={{ duration: 0.3 }}
-          className="cursor-pointer hover:text-yellow-300  font-semibold  hover:opacity-[0.9] dark:text-white"
-        >
-          {item}
-        </motion.p>
+        <Link to={link === "" ? "/" : link}>
+          <motion.p
+            transition={{ duration: 0.3 }}
+            className="cursor-pointer hover:text-yellow-300  font-semibold  hover:opacity-[0.9] dark:text-white"
+          >
+            {item}
+          </motion.p>
+        </Link>
         {item !== "Home" && item !== "Contact Us" ? (
           <motion.img src={downArrow} className="scale-50" />
         ) : null}
