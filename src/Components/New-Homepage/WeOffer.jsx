@@ -41,6 +41,22 @@ const WeOffer = () => {
           ease: 'power2.inOut'
         }
       );
+      gsap.from('#tick', {
+        scale : 0,
+        duration : 0.5,
+        scrollTrigger : {
+          trigger : '#tick',
+          start : "200px bottom",
+        }
+      })
+      gsap.from('#border-bottom', {
+        width : 0,
+        duration : 0.7,
+        scrollTrigger : {
+          trigger : '#border-bottom',
+          start : "200px bottom",
+        }
+      })
   },[])
 
   return (
@@ -50,41 +66,41 @@ const WeOffer = () => {
         <div className="max-w-fit ml-[-30px]">
           <h2 className="text-2xl font-semibold">WHY CHOOSE US</h2>
           {/* border bottom  */}
-          <div className="mt-2 w-32 mx-auto h-[6px] rounded-full bg-yellow-400"></div>
+          <div id='border-bottom' className="mt-2 w-32 mx-auto h-[6px] rounded-full bg-customBlue"></div>
         </div>
         <section className="flex justify-between w-full gap-20 mt-10">
           {/* text-body */}
           <aside className=" w-[50%] text-gray-600 space-y-8 text-justify leading-9">
            <h1 className="font-bold text-3xl">We Offer</h1>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">3D Printing</h2>
            </div>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">Co-Working space</h2>
            </div>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">3D Printing</h2>
            </div>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">Co-Working space</h2>
            </div>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">3D Printing</h2>
            </div>
            <div className="flex items-center gap-5">
-                <img src={tick} alt="" className="w-12" />
+                <img id='tick' src={tick} alt="" className="w-12" />
                 <h2 className="text-3xl font-semibold">Co-Working space</h2>
            </div>
           </aside>
           <aside className="grid grid-cols-4 grid-rows-4 min-w-[60%] gap-5">
-            <div id='box-1' className="row-span-3 row-start-2 bg-yellow-300"></div>
-            <div id='box-2' className="row-span-3 col-span-3  bg-yellow-300"></div>
-            <div id='box-3' className="col-span-3 bg-yellow-300"></div>
+            <div id='box-1' className="row-span-3 row-start-2 bg-customBlue"></div>
+            <div id='box-2' className="row-span-3 col-span-3  bg-customBlue"></div>
+            <div id='box-3' className="col-span-3 bg-customBlue"></div>
           </aside>
         </section>
       </div>

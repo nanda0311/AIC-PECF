@@ -9,7 +9,7 @@ const statsData = [
 
 const Stats = () => {
   return (
-    <div className='bg-yellow-400 text-white font-bold px-20 py-16 mt-16'>
+    <div className='bg-customBlue text-white font-bold px-20 py-16 mt-16'>
         <div className='flex justify-between'>
             {
                 statsData.map((item,index) => {
