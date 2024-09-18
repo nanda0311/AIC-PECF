@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Layout/Homepage";
-import HomePage from "./Pages/HomePage";
-import Contact from "./Pages/Contact";
+import Home from "./Pages/Home";
+import NewHome from "./Pages/NewHome";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Homepage />}>
-          <Route index element={<HomePage />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route index element={<NewHome />} />
+          <Route path="/contact" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
