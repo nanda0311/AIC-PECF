@@ -2,6 +2,12 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Aic_Logo } from "../../assets";
+import { FaRocket,FaLaptopCode  } from "react-icons/fa";
+import { GiMicroscope } from "react-icons/gi";
+import { RiFundsFill } from "react-icons/ri";
+import { IoTelescope } from "react-icons/io5";
+import { TbDrone } from "react-icons/tb";
+import { BsCpuFill } from "react-icons/bs";
 
 const About = () => {
   /* 
@@ -84,11 +90,15 @@ const About = () => {
           <aside className="grid grid-cols-4 grid-rows-4 min-w-[50%] gap-5 overflow-hidden">
             <div
               id="box-1"
-              className="row-span-4 bg-customBlue flex flex-col justify-evenly"
+              className="row-span-4 bg-customBlue flex flex-col justify-evenly items-center rounded-xl"
             >
-              <div className="border"></div>
-              <div className="border"></div>
-              <div className="border"></div>
+              <IoTelescope color="white" size={50}/>
+              <div className="w-full h-1 bg-white"></div>
+              <TbDrone color="white" size={50}/>
+              <div className="w-full h-1 bg-white"></div>
+              <FaLaptopCode color="white" size={50}/>
+              <div className="w-full h-1 bg-white"></div>
+              <BsCpuFill color="white" size={50}/>
             </div>
             <div
               id="box-2"
@@ -102,11 +112,13 @@ const About = () => {
             </div>
             <div
               id="box-3"
-              className="col-span-3 col-start-2 bg-customBlue flex justify-evenly"
+              className="col-span-3 col-start-2 bg-customBlue flex justify-evenly items-center rounded-xl"
             >
-              <div className="border"></div>
-              <div className="border"></div>
-              <div className="border"></div>
+              <FaRocket color="white" size={50}/>
+              <div className="w-1 h-full bg-white"></div>
+              <GiMicroscope color="white" size={50}/>
+              <div className="w-1 h-full bg-white"></div>
+              <RiFundsFill color="white" size={50}/>
             </div>
           </aside>
         </section>

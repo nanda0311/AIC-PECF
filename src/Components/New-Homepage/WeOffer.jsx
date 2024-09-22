@@ -2,6 +2,7 @@ import tick from "../../assets/icons/tick.svg";
 import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { aerialVehicle, electronics, iotImage } from "../../assets/Images";
 
 const WeOffer = () => {
   /*  
@@ -71,7 +72,7 @@ const WeOffer = () => {
     <div>
       {" "}
       <div className="w-[85%] mx-auto mb-20 ">
-        <div className="max-w-fit ml-[-30px]">
+        <div className="max-w-fit ml-[-30px] mt-10">
           <h2 className="text-2xl font-semibold">WHY CHOOSE US</h2>
           {/* border bottom  */}
           <div
@@ -92,16 +93,22 @@ const WeOffer = () => {
               );
             })}
           </aside>
-          <aside className="grid grid-cols-4 grid-rows-4 min-w-[60%] gap-5">
+          <aside className="grid grid-cols-4 grid-rows-4 max-h-[70vh] max-w-[60%] gap-5">
             <div
               id="box-1"
               className="row-span-3 row-start-2 bg-customBlue"
-            ></div>
+            >
+             <img src={aerialVehicle} className="h-full w-full object-cover" alt="unammned aerial vehicle" />
+            </div>
             <div
               id="box-2"
               className="row-span-3 col-span-3  bg-customBlue"
-            ></div>
-            <div id="box-3" className="col-span-3 bg-customBlue"></div>
+            >
+            <img src={iotImage} className="object-fill w-full h-full" alt="IOT" />
+            </div>
+            <div id="box-3" className="col-span-3 h-auto bg-customBlue overflow-hidden"> 
+              <img src={electronics} className="object-cover object-[0px_-80px] w-full h-full" alt="electronics design" />
+            </div>
           </aside>
         </section>
       </div>

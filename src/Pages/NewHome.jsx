@@ -5,6 +5,7 @@ import WeOffer from "../Components/New-Homepage/WeOffer";
 import Stats from "../Components/New-Homepage/Stats";
 import WhatWeDo from "../Components/New-Homepage/WhatWeDo";
 import PhotoSlides from "../Components/New-Homepage/PhotoSlides";
+import Testimonials from "../Components/New-Homepage/Testimonials";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <WhatWeDo />
       <PhotoSlides />
       <WeOffer />
+      <Testimonials/>
     </>
   );
 };

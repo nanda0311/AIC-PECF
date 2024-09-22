@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Tilt } from "react-tilt";
 import { Home1, Home2, Home3 } from "../../assets/Images";
 
 const Landing = () => {
@@ -19,20 +20,26 @@ const Landing = () => {
         <Link>Apply for Incubation</Link>
       </div>
       <div className="flex justify-center gap-16 px-32 mt-5">
-        <div className="max-h-80 max-w-[800px] w-full rounded-3xl bg-customBlue overflow-hidden shadow-2xl shadow-customBlue">
+        <Tilt style={{width : 1300}}>
+        <div className=" w-full rounded-3xl bg-customBlue overflow-hidden shadow-2xl shadow-customBlue">
           <img
             src={Home1}
             alt=""
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
-        <div className="min-h-96 w-full rounded-3xl bg-customBlue shadow-2xl shadow-customBlue">
+        </Tilt>
+
+        <Tilt>
+        <div className=" w-full rounded-3xl bg-customBlue shadow-2xl shadow-customBlue">
           <img
             src={Home2}
             alt=""
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
+        </Tilt>
+        <Tilt style={{width : 1300}}>
         <div className="max-h-80 max-w-[800px] w-full rounded-3xl bg-customBlue shadow-2xl shadow-customBlue">
           <img
             src={Home3}
@@ -40,6 +47,7 @@ const Landing = () => {
             className="w-full h-full object-cover rounded-2xl"
           />
         </div>
+        </Tilt>
       </div>
     </div>
   );
