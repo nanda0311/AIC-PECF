@@ -6,13 +6,11 @@ import Navbar_menu from "../Data/Navbar_details";
 
 export function NavbarDemo() {
   return (
-    <div className="w-full flex items-center justify-center">
+    <div className="w-full flex items-center justify-center border-b-4 rounded-3xl border-customBlue pt-2">
       <Navbar className="top-2 sticky" />
     </div>
   );
 }
-
-
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
